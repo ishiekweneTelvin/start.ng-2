@@ -1,0 +1,86 @@
+body {
+    background-color: azure;
+    font-family: arail;
+    font-size: 15px;
+    padding: 30px;
+}
+
+h1 { background-color: grey;
+text-align: center;
+color: aliceblue;}
+
+.number { background-color: lightblue;}
+
+h2{ background-color: grey;}
+
+
+.roll {
+    background-color: lightblue;
+    padding: 40px;
+    padding: 40px;
+}
+
+.contact-head{ 
+    text-align: center;
+    color: black;
+    background-color: grey;
+    padding: 10px;
+    font-size: 30px;
+}
+
+
+.main {
+    padding: 20px;
+}
+
+.main label {
+    font-size: 20px;
+}
+
+.main input {
+    font-size: 30px;
+}
+button {
+    font-size: 20px;
+}
+textarea {
+    font-size: 60px;
+}
+
+.cong {background-color: grey;}
+
+ .link {
+  
+    text-decoration: none;
+    color: white;
+     
+}
+
+.top {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+
+.row {
+    font-size: 20px;
+    
+}
+.sub {
+    background-color: black;
+    color: antiquewhite;
+    font-size: 20px;
+}
+
+.ten {
+    font-size: 20px;
+}
+form {
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.pop {
+    font-size: 15px;
+    background-color: antiquewhite;
+}
