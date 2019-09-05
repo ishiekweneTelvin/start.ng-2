@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<link rel="stylesheet" href="style.css">
+<img src="https://res.cloudinary.com/telvin/image/upload/v1554348694/4d2a54b6-3f35-40fd-ab48-279a3d97b8fb.jpg" width="200px" height="200px">
+<div class="number">
+<h1> TELVIN ISHIEKWENE</h1>
+
+<h2>OBJECTIVE</h2>
+<p>To become a well-seasoned and competent professional who seeks to drive excellence, professionalism and integrity within a dynamic organization, where my intellect will be utilized in the provision of solutions that will help in the advancement of the organization, nation and ultimately the world.</p>
+
+<h2>EDUCATION </h2>
+<ul>
+    <li>
+    <p><strong>Chemical Engineering | Covenant University, Ota</strong><p>
+        <p>June 2018</p>
+   
+    </li>
+ </ul>
+<ul>
+    <li>
+    <p><strong>West Africa Senior Secondary School Certification Examination | Jubilee College Lagos.</strong><p>
+        <p>June 2012</p>
+   
+        
+        
+        
+        
+        
+        
+        
+        
+    </li>
+ </ul>
+
+    
+    
+<h2>SKILLS</h2>
+<ul>
+    <li>Working knowledge of Adobe Photoshop.</li></ul>
+
+<ul><li>Working knowledge of Frontend Web Development (HTML CSS and Javascript)</li></ul>
+<ul><li>Research/ Research paper writing</li></ul>
+<ul><li>Good presentation Skills</li>
+</ul>
+</div>
+ <div class="top">
+                        <form name="contactForm" onsubmit="return validateForm()">
+                            <h2>Contact Form</h2>
+                            <br>
+                            <div class="row">
+                                <label>Name</label><br>
+                                <input type="text" name="name" required>
+                                <div class="error" id="nameErr"></div>
+                            </div>
+                            <div class="row">
+                                <label>Email Address</label><br>
+                                <input type="text" name="email" required>
+                                <div class="error" id="emailErr"></div>
+                            </div>
+                            <div class="row">
+                                <label>Title</label><br>
+                                <input type="text" name="title" required>
+                                <div class="error" id="titleErr"></div>
+                            </div>
+                            <div class="row">
+                                <label>Message</label><br>
+                                <textarea name="message" rows="5" required></textarea>
+                                <div class="error" id="messageErr"></div>
+                            </div>
+                            <div class="row">
+                                <input type="submit" class="pop" value="SUBMIT">
+                            </div>
+                        </form>
+                    </div>
+<script>
+function printError(elemId, hintMsg) {
+    document.getElementById(elemId).innerHTML = hintMsg;
+}
+
+function validateForm() { 
+    var name = document.contactForm.name.value;
+    var email = document.contactForm.email.value;
+    var title = document.contactForm.title.value;
+    var message = document.contactForm.message.value;
+
+    var nameErr = emailErr = titleErr = messageErr = true;
+    if(name == "") {
+        printError("nameErr", "Please enter your name");
+    } 
+    else if(name.length < 4){
+        printError("nameErr", "Name is too short (at least 4 characters)");
+    }
+    else {
+        var regex = /^[a-zA-Z\s]+$/;                
+        if(regex.test(name) === false) {
+            printError("nameErr", " enter a valid name");
+        } else {
+            printError("nameErr", "");
+            nameErr = false;
+        }
+    }
+
+    if(email == "") {
+        printError("emailErr", " enter your email address");
+    } else {
+    
+        var regex = /^\S+@\S+\.\S+$/;
+        if(regex.test(email) === false) {
+            printError("emailErr", " enter a valid email address");
+        } else{
+            printError("emailErr", "");
+            emailErr = false;
+        }
+    }
+    
+    if(title == "") {
+        printError("titleErr", "Please enter a title");
+    } else {
+        printError("titleErr", "");
+        titleErr = false;
+    }
+
+    if(message == "") {
+        printError("messageErr", "Please enter a message");
+    } 
+    else if(message.length < 20){
+        printError("messageErr", "Message is too short (at least 20 characters)");
+    }
+    else {
+        printError("messageErr", "");
+        messageErr = false;
+    }
+    
+    
+    if((nameErr || emailErr || titleErr || messageErr ) == true) {
+       return false;
+    } else {
+    
+        var status = "Message sent successfully!";
+        alert(status);
+    }
+};
+</script>
